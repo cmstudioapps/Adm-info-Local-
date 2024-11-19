@@ -1,118 +1,115 @@
-/* Reset e estilo base */
+/* Estilo geral */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
     background-color: #fafafa;
+    margin: 0;
     color: #262626;
 }
 
-/* Container do painel */
-#painel-container {
-    max-width: 400px;
-    margin: 50px auto;
+/* Cabeçalho */
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #262626;
+}
+
+/* Menu lateral */
+nav#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 60px;
+}
+
+nav#sidebar ul li {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+nav#sidebar ul li a {
+    text-decoration: none;
+    color: #262626;
+    font-size: 18px;
+}
+
+nav#sidebar ul li:hover {
+    background-color: #f5f5f5;
+}
+
+/* Botão do menu */
+.menu-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #262626;
+    cursor: pointer;
+    z-index: 1100;
+}
+/* Feed */
+#feed {
+    max-width: 600px;
+    margin: 80px auto 0;
     padding: 20px;
     background: #fff;
     border: 1px solid #dbdbdb;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
     text-align: center;
+    border-radius: 2vh;
+    box-shadow: 0 6px 12px;
+    overflow: hidden; /* Impede que imagens ou conteúdo transbordem */
 }
 
-/* Título */
-#titulo-painel {
-    font-size: 24px;
-    font-weight: bold;
-    color: #262626;
-    margin-bottom: 20px;
+#feed img {
+    width: 100%; /* Faz a imagem ocupar toda a largura da div */
+    height: auto; /* Mantém a proporção original da imagem */
+    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
 }
 
-/* Labels e inputs */
-label {
-    font-size: 14px;
-    display: block;
-    text-align: left;
-    margin-bottom: 5px;
-    color: #8e8e8e;
+#feed h3 {
+    color: #999;
 }
 
-input, textarea {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #dbdbdb;
-    border-radius: 5px;
-    background-color: #fafafa;
-    font-size: 14px;
-    color: #262626;
+#feed p {
+    font-size: 18pt;
 }
 
-input[type="file"] {
-    border: none;
-    margin-bottom: 15px;
-}
-
-/* Botão de enviar */
-#botao-enviar {
-    width: 100%;
-    padding: 10px;
-    background: linear-gradient(45deg, #fd5949, #d6249f);
-    border: none;
-    border-radius: 5px;
+/* Botão de informações */
+.info-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #262626;
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
     cursor: pointer;
-    transition: 0.3s;
-}
-
-#botao-enviar:hover {
-    opacity: 0.8;
-}
-#delete {
-    width: 100%;
-    padding: 10px;
-    background: linear-gradient(45deg, red, #d6249f);
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-top: 2vh;
-}
-#visivel {
-    width: 100%;
-    padding: 10px;
-    background: linear-gradient(45deg, black, #d6249f);
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-bottom: 2vh;
-}
-/* Link para notificações */
-#notificacao-link {
-    display: inline-block;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #3897f0;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-#notificacao-link:hover {
-    text-decoration: underline;
-}
-
-/* Responsividade */
-@media (max-width: 500px) {
-    #painel-container {
-        margin: 20px;
-        padding: 15px;
-    }
-
-    #titulo-painel {
-        font-size: 20px;
-    }
 }

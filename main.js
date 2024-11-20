@@ -32,6 +32,7 @@ function enviar() {
     .then(idToken => {
 
       if (confirm("Tem certeza?")) {
+   alert("clique em ok e aguarde a confirmação de que a notícia foi postada")
         enviarDados(idToken); // Chama a função para enviar os dados
       }
     })

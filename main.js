@@ -38,7 +38,7 @@ function enviar() {
     })
     .catch(error => {
       console.error("Erro de autenticação:", error);
-      alert("Você não tem acesso a este recurso, ou sua senha e e-mail de acesso estão erradas.")
+      alert("Você não tem acesso a este recurso, seu e-mail ou senha não está registrado como um dos administradores do app.")
     });
 }
 

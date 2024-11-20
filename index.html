@@ -14,6 +14,127 @@
   <script src="main.js">
 
   </script>
+
+<style>
+/* Reset e estilo base */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #262626;
+}
+
+/* Container do painel */
+#painel-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Título */
+#titulo-painel {
+    font-size: 24px;
+    font-weight: bold;
+    color: #262626;
+    margin-bottom: 20px;
+}
+
+/* Labels e inputs */
+label {
+    font-size: 14px;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #8e8e8e;
+}
+
+input, textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    background-color: #fafafa;
+    font-size: 14px;
+    color: #262626;
+}
+
+input[type="file"] {
+    border: none;
+    margin-bottom: 15px;
+}
+
+/* Botão de enviar */
+#botao-enviar {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(45deg, #fd5949, #d6249f);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#botao-enviar:hover {
+    opacity: 0.8;
+}
+#delete {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(45deg, red, #d6249f);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 2vh;
+}
+#visivel {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(45deg, black, #d6249f);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 2vh;
+}
+/* Link para notificações */
+#notificacao-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #3897f0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#notificacao-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+    #painel-container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    #titulo-painel {
+        font-size: 20px;
+    }
+}
+</style>
 </head>
 <body>
   <div id="painel-container">

@@ -20,7 +20,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 function enviar() {
-  
+
   const email = document.getElementById('email').value;
   const senha = document.getElementById('senha').value;
 
@@ -30,9 +30,9 @@ function enviar() {
       return userCredential.user.getIdToken(); // Obtém o token de autenticação
     })
     .then(idToken => {
-      
-      if(confirm("Tem certeza?")) {
-      enviarDados(idToken); // Chama a função para enviar os dados
+
+      if (confirm("Tem certeza?")) {
+        enviarDados(idToken); // Chama a função para enviar os dados
       }
     })
     .catch(error => {
@@ -43,16 +43,18 @@ function enviar() {
 
 function enviarDados(idToken) {
   const imagem = document.getElementById('imagem').files[0];
-  const legenda = "<pe>"+ document.getElementById('legenda').value +"<pe>"
+  const legenda = "<pe>" + document.getElementById('legenda').value + "<pe>"
   const link = document.getElementById('link').value;
-let visibilidade = document.getElementById("visivel").value
-  
-  if(!link) {
-    
+  let visibilidade = document.getElementById("visivel").value
+
+  if (!link) {
+
     visibilidade = "none"
-    
+
   }
   
+  if (imagem) {
+
   // Upload da imagem ao Firebase Storage
   const storageRef = firebase.storage().ref('imagens/' + imagem.name);
   storageRef.put(imagem)
@@ -91,6 +93,11 @@ let visibilidade = document.getElementById("visivel").value
       console.error("Erro ao enviar dados:", error);
       alert("erro ao enviar a postagem")
     });
+  } else {
+    
+    alert("No momento é obrigatório que a notícia esteja acompanhada de uma imagem, por favor selecione uma imagem")
+    
+  }
 }
 
 function deletar() {
@@ -102,10 +109,10 @@ function deletar() {
       return userCredential.user.getIdToken(); // Obtém o token de autenticação
     })
     .then(idToken => {
-      
-      
-        apagar(); // Chama a função para enviar os dados
-      
+
+
+      apagar(); // Chama a função para enviar os dados
+
     })
     .catch(error => {
       console.error("Erro de autenticação:", error);
